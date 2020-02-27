@@ -1,3 +1,6 @@
+#This code is has been almost entirely copied from Tensorflow tutorial, you can find the link in the log file of this repository.
+
+
 from __future__ import absolute_import, division, print_function, unicode_literals
 
 # TensorFlow and tf.keras
@@ -8,7 +11,7 @@ from tensorflow import keras
 import numpy as np
 import matplotlib.pyplot as plt
 
-#Import Dataset Fashion Mnist
+#Import Dataset Fashion Mist
 fashion_mnist = keras.datasets.fashion_mnist
 
 (train_images, train_labels), (test_images, test_labels) = fashion_mnist.load_data()
@@ -41,6 +44,9 @@ model.compile(optimizer='adam',
 model.fit(train_images, train_labels, epochs=15)  #15 is the value with best accuracy i have found
 
 test_loss, test_acc = model.evaluate(test_images,  test_labels, verbose=2)
+
+print('\nTest accuracy:', test_acc)
+
 
 
 #Predictions 
@@ -85,7 +91,7 @@ def plot_value_array(i, predictions_array, true_label):
   thisplot[true_label].set_color('blue')
 
 
-#Call of plotting functions, displaying of first 25 images of Test Set
+#Call of plotting functions, displaying of first 15 images of Test Set
 
 num_rows = 5
 num_cols = 3
@@ -98,4 +104,3 @@ for i in range(num_images):
   plot_value_array(i, predictions[i], test_labels)
 plt.tight_layout()
 plt.show()
-
