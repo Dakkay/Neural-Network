@@ -1,0 +1,13 @@
+
+ToDoList:
+
+-verbose meaning ...
+-investigate on how plotting works in clothes_recognition
+
+
+clothes_recognition------------------------------------|
+Changed cmpap value:  plt.cm.binary ----->  'Greys'    |
+Comment code c_r ---->                                 |
+It now plots 25 images of test set                     |_______________________
+                                                                               |
+Sources of code :  https://www.tensorflow.org/tutorials/keras/classification   |
